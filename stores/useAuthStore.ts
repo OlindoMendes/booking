@@ -28,7 +28,7 @@ export const useAuthStore = defineStore('auth', () => {
       localStorage.setItem('authToken', response.token);
       console.log('HERE ', router);
       
-      router.push("/hotels");
+      router.push("/dummylogin");
     } catch (error) {
       console.error('Erro ao fazer login:', error);
     }

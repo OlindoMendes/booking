@@ -2,6 +2,7 @@
   <div class="congratulations-page">
     <h1>🎉 Congratulations! 🎉</h1>
     <p>You’ve reached this page successfully. Well done!</p>
+    <h3>This a dummy protected page, just for fun!</h3>
     <div class="fireworks">
       <div v-for="n in 6" :key="n" class="firework"></div>
     </div>
@@ -10,8 +11,8 @@
 
 <script setup>
 definePageMeta({
-  middleware: 'auth'
-})
+  middleware: "auth",
+});
 </script>
 
 <style scoped>
@@ -35,7 +36,11 @@ h1 {
 
 p {
   font-size: 1.25rem;
-  color: #4a5568;
+  color: #505256;
+}
+h3 {
+  font-size: 1rem;
+  color: #6d6767;
 }
 
 .fireworks {
