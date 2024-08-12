@@ -1,3 +1,8 @@
+![loginview](https://github.com/user-attachments/assets/9ed13c8e-9ed3-470b-b1df-c100ba58a58d)
+![homepage](https://github.com/user-attachments/assets/ea8ea667-3b13-4338-a822-64d2e5b6502b)
+![comparehotel](https://github.com/user-attachments/assets/94b93b87-ccc1-4364-b117-2fe1e8fe8adb)
+![boookinmodal](https://github.com/user-attachments/assets/edd29d8c-1e04-4f23-8e46-11721122826c)
+![bookingmodalvalidation](https://github.com/user-attachments/assets/3c465033-6bdc-4042-9c7a-b2af9dca61ad)
 App - Reserva de Hotéis
 
 Descrição: Este projeto é uma aplicação desenvolvida com Nuxt 3, Vue 3, TypeScript, Pinia, e Tailwind CSS para simular um sistema de reserva de hotéis. O foco é proporcionar uma interface funcional que permita ao usuário pesquisar, comparar e reservar hotéis de forma intuitiva e eficiente.
