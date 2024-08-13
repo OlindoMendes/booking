@@ -9,6 +9,7 @@ export default defineVitestConfig({
           indexedDb: true,
         }
       }
-    }
+   },
+    globals: true,
   }
 })
