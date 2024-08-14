@@ -1,21 +1,32 @@
-import { it, expect } from 'vitest'
+import { it, expect, describe } from 'vitest'
+import { render } from '@testing-library/vue';
 
-import { renderSuspended } from '@nuxt/test-utils/runtime'
 import ComparisonHotelTable from '../../components/ComparisonHotelTable.vue'
+describe('ComparisonHotelTable', () => {
 
-it('can also render an app', async () => {
-    const html = await renderSuspended(ComparisonHotelTable, { route: '/' })
-    expect(html).toMatchInlineSnapshot(`
-    "<thead>
-        <tr class="bg-gray-100">
-          <th
-            v-for="hotel in hotels"
-            :key="hotel.id"
-            class="text-center text-sm sm:text-base px-4 py-2"
-          >
-            {{ hotel.name }}
-          </th>
-        </tr>
-      </thead>"
-  `)
+  it('exists hotels those names and location', async () => {
+    const { getByText } = render(ComparisonHotelTable, {
+      props: {
+        hotels: [
+          { id: 1, name: 'Hotel Sunshine', location: 'Rio de Janeiro', price: '$100' },
+          { id: 2, name: 'Mountain Retreat', location: 'Alps', price: '$150' }
+        ]
+      }
+
+    })
+    expect(getByText('Hotel Sunshine')).toBeDefined()
+    expect(getByText('Mountain Retreat')).toBeDefined()
+    expect(getByText('Rio de Janeiro')).toBeDefined()
+    expect(getByText('$100')).toBeDefined()
+  })
+  it('renders no message when no hotels are available', async () => {
+    const { getByText } = render(ComparisonHotelTable, {
+      props: {
+        hotels: []
+      }
+    })
+    
+
+  })
+
 })
